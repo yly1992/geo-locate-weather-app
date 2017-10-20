@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Page metadata -->
+    <meta charset="utf-8">
+    <title>Geo Locate Web Application</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link href="favicon.ico">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="application/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp1qR9jDs5F3KUH8JI2ZStNHNq3SyLtWc&callback=initMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="js/main.js" type="application/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="application/javascript"></script>
+</head>
+
+<body>
+
+<header>Geo Locate Web Application</header>
+
+<div id="container_map">
+
+    <div id="container_user_input">
+        Address: <input id="place" placeholder="Please input the location" type="text" />
+        Date: <input id="date" type="date"/>
+        <button id="get_weather" class="myButton">Go!</button>
+    </div>
+
+    <div id="map"></div>
+</div>
+
+<div id="container_forecast_chart">
+
+    <!-- Visual chart (courtesy of Chart.js) -->
+    <canvas id="forecast_chart"></canvas>
+
+    <p id="forecast_place">Place</p>
+    <p id="forecast_summary">&&nbsp;Forecast Summary</p>
+    <!-- Forecast header contains the forecast place and forecast summary labels atop the visual chart -->
+    <div id="forecast_header">
+        <!-- Place label -->
+
+    </div>
+</div>
+<div class="clear"></div>
+<div>
+
+    <ul id="range_mode_list">
+        <button id="range_mode_hourly" class="range_mode" value="hourly">Hourly</button>
+        <button id="range_mode_daily" class="range_mode" value="daily">Daily</button>
+    </ul>
+
+    <ul id="display_mode_list">
+        <button id="display_mode_temperature" class="display_mode" value="temperature">Temperature</button>
+        <button id="display_mode_humidity" class="display_mode" value="humidity">Humidity</button>
+        <button id="display_mode_pressure" class="display_mode" value="pressure">Pressure</button>
+        <button id="display_mode_precipitation" class="display_mode" value="precipitation">Precipitation</button>
+        <button id="display_mode_wind" class="display_mode" value="wind">Wind</button>
+    </ul>
+</div>
+
+<br>
+<br>
+<br>
+<div id="container_history">
+
+
+    <h2>Search History</h2>
+
+    <button id="clear_history" class="button">Clear History</button>
+
+    <div id="history">
+
+        <ul id="history_list"></ul>
+    </div>
+</div>
+</body>
+</html>
